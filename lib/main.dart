@@ -30,7 +30,12 @@ class Home extends StatelessWidget {
         children: <Widget>[
           Stack(
             children: [
-              Image.asset(''),
+              ClipRRect(
+                borderRadius: const BorderRadius.only(
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20)),
+                child: Image.asset('lib/assets/images/viagem.png'),
+              )
             ],
           )
         ],
