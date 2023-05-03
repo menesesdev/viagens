@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Conheça o mundo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -39,7 +39,7 @@ class Home extends StatelessWidget {
                   'assets/images/capa.jpg',
                   fit: BoxFit.cover,
                   color:
-                      const Color.fromARGB(255, 13, 105, 255).withOpacity(0.6),
+                      const Color.fromARGB(255, 13, 105, 255).withOpacity(1.0),
                   colorBlendMode: BlendMode.softLight,
                 ),
               ),
@@ -52,39 +52,6 @@ class Home extends StatelessWidget {
                       onPressed: () {},
                       icon: const Icon(Icons.arrow_back_ios_new_rounded),
                       color: Colors.white,
-                    ),
-                    DecoratedBox(
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: FractionalOffset.topCenter,
-                          end: FractionalOffset.bottomCenter,
-                          colors: [
-                            const Color(0xff0d69ff).withOpacity(0.0),
-                            const Color(0xff0069ff).withOpacity(0.8),
-                          ],
-                        ),
-                      ),
-                    ),
-                    DecoratedBox(
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                            begin: FractionalOffset.topLeft,
-                            end: FractionalOffset.bottomRight,
-                            colors: [
-                              const Color(0xff692eff).withOpacity(0.8),
-                              const Color(0xff642cf4).withOpacity(0.8),
-                              const Color(0xff602ae9).withOpacity(0.8),
-                              const Color(0xff5224c8).withOpacity(0.8),
-                              const Color(0xff5e29e5).withOpacity(0.8),
-                            ],
-                            stops: const [
-                              0.0,
-                              0.25,
-                              0.5,
-                              0.75,
-                              1.0
-                            ]),
-                      ),
                     ),
                     IconButton(
                       onPressed: () {},
@@ -108,6 +75,26 @@ class Home extends StatelessWidget {
                     )),
               )
             ],
+          ),
+          Container(
+            height: MediaQuery.of(context).size.height,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: ListView(children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Container(
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 13, 105, 255)
+                          .withOpacity(0.6),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Row(),
+                  ),
+                )
+              ]),
+            ),
           )
         ],
       ),
