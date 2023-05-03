@@ -34,7 +34,10 @@ class Home extends StatelessWidget {
                 borderRadius: const BorderRadius.only(
                     bottomLeft: Radius.circular(20),
                     bottomRight: Radius.circular(20)),
-                child: Image.asset('lib/assets/images/viagem.png'),
+                child: Image.asset(
+                  'assets/images/capa.jpg',
+                  fit: BoxFit.cover,
+                ),
               )
             ],
           )
