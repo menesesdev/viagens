@@ -38,8 +38,7 @@ class Home extends StatelessWidget {
                 child: Image.asset(
                   'assets/images/capa.jpg',
                   fit: BoxFit.cover,
-                  color:
-                      const Color.fromARGB(255, 13, 105, 255).withOpacity(1.0),
+                  color: Color.fromARGB(165, 60, 60, 5).withOpacity(1.0),
                   colorBlendMode: BlendMode.softLight,
                 ),
               ),
@@ -63,11 +62,11 @@ class Home extends StatelessWidget {
               ),
               const Center(
                 child: Padding(
-                    padding: EdgeInsets.only(top: 180),
+                    padding: EdgeInsets.only(top: 215),
                     child: Text(
-                      "CONHEÇA O MUNDO",
+                      "CONHEÇA O PIAUÍ",
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 30,
                         fontFamily: 'Montserrat',
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -84,13 +83,43 @@ class Home extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8),
                   child: Container(
-                    height: 100,
+                    height: 200,
                     decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 13, 105, 255)
-                          .withOpacity(0.6),
+                      color: Color.fromARGB(255, 222, 188, 15).withOpacity(1.0),
                       borderRadius: BorderRadius.circular(8),
                     ),
-                    child: Row(),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Stack(
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
+                              child: Image.asset(
+                                'assets/images/cachoeira_urubu.jpg',
+                                fit: BoxFit.fill,
+                                //color: const Color.fromARGB(255, 13, 105, 255)
+                                //  .withOpacity(1.0),
+                                // colorBlendMode: BlendMode.softLight,
+                              ),
+                            ),
+                            const Center(
+                              child: Padding(
+                                  padding: EdgeInsets.only(top: 120, left: 10),
+                                  child: Text(
+                                    "Cachoeira do urubú",
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontFamily: 'Montserrat',
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                    ),
+                                  )),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 )
               ]),
